@@ -7,21 +7,12 @@ Gem::Specification.new do |spec|
   spec.name          = "useragent_api"
   spec.version       = UseragentApi::VERSION
   spec.authors       = ["Takashi Masuda"]
-  spec.email         = ["masutaka@feedforce.jp"]
+  spec.email         = ["masutaka.net@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = 'Ruby toolkit for working with the UserAgent API'
+  spec.description   = 'Simple wrapper for the UserAgent API https://useragentapi.com/'
+  spec.homepage      = 'https://github.com/feedforce/useragent_api'
   spec.license       = "MIT"
-
-  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
-  # to allow pushing to a single host or delete this section to allow pushing to any host.
-  if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
-  else
-    raise "RubyGems 2.0 or newer is required to protect against " \
-      "public gem pushes."
-  end
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
