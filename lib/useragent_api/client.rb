@@ -3,6 +3,7 @@ require 'json'
 require 'net/https'
 
 module UseragentApi
+  # A class which wraps calls to UseragentAPI
   class Client
     # @param api_key [String] UseragentAPI API key
     # @raise [ArgumentError] when `api_key` is invalid

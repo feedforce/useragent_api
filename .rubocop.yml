@@ -1,0 +1,20 @@
+AllCops:
+  Exclude:
+    - Rakefile
+    - bin/*
+    - vendor/**/*
+
+Metrics/BlockLength:
+  Exclude:
+    - spec/useragent_api/**/*
+
+Metrics/LineLength:
+  Max: 128
+  Exclude:
+    - spec/useragent_api/**/*
+
+Style/FormatString:
+  Enabled: false
+
+Style/TrailingCommaInLiteral:
+  Enabled: false
