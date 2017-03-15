@@ -7,6 +7,11 @@ AllCops:
     - bin/*
     - vendor/**/*
 
+Metrics/LineLength:
+  Max: 128
+  Exclude:
+    - spec/useragent_api/**/*
+
 Style/FormatString:
   Enabled: false
 

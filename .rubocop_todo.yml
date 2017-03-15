@@ -10,9 +10,3 @@
 # Configuration parameters: CountComments, ExcludedMethods.
 Metrics/BlockLength:
   Max: 78
-
-# Offense count: 4
-# Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, IgnoredPatterns.
-# URISchemes: http, https
-Metrics/LineLength:
-  Max: 146
