@@ -32,14 +32,3 @@ Style/FormatString:
   Exclude:
     - 'lib/useragent_api/client.rb'
     - 'spec/useragent_api/client_spec.rb'
-
-# Offense count: 22
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles, ConsistentQuotesInMultiline.
-# SupportedStyles: single_quotes, double_quotes
-Style/StringLiterals:
-  Exclude:
-    - 'lib/useragent_api.rb'
-    - 'lib/useragent_api/version.rb'
-    - 'spec/spec_helper.rb'
-    - 'useragent_api.gemspec'
