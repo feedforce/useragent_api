@@ -15,6 +15,7 @@ describe UseragentApi::Client do
 
   describe '#parse' do
     shared_examples_for 'UseragentAPI' do
+      let(:client) { UseragentApi::Client.new(api_key) }
       let(:request_uri) { 'https://useragentapi.com/api/v4/json/%s/%s' % [api_key, CGI.escape(useragent)] }
 
       before do
@@ -23,12 +24,10 @@ describe UseragentApi::Client do
         )
       end
 
-      it 'is valid response' do
-        expect(client.parse(useragent)).to match_array expectation
-      end
+      subject { client.parse(useragent) }
+      it { is_expected.to match_array expectation }
     end
 
-    let(:client) { UseragentApi::Client.new(api_key) }
     let(:api_key) { '01234abc' }
     let(:useragent) { 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36' }
 
