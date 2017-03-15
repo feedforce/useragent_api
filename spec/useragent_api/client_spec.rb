@@ -72,5 +72,23 @@ describe UseragentApi::Client do
         expect(client.parse(user_agent)).to match_array valid_response
       end
     end
+
+    context 'when a server returns a broken response' do
+      let(:api_key) { '01234abc' }
+      let(:stub_status) { 500 }
+      let(:stub_body) { '<b>Fatal error</b>' }
+      let(:user_agent) { 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36' }
+      let(:request_uri) { 'https://useragentapi.com/api/v4/json/%s/%s' % [api_key, CGI.escape(user_agent)] }
+
+      before do
+        stub_request(:get, request_uri).to_return(
+          status: stub_status, body: stub_body
+        )
+      end
+
+      it 'is valid response' do
+        expect(client.parse(user_agent)).to eq({})
+      end
+    end
   end
 end
