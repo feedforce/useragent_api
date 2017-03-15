@@ -7,5 +7,8 @@ AllCops:
     - bin/*
     - vendor/**/*
 
+Style/FormatString:
+  Enabled: false
+
 Style/TrailingCommaInLiteral:
   Enabled: false
