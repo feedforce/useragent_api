@@ -16,11 +16,3 @@ Metrics/BlockLength:
 # URISchemes: http, https
 Metrics/LineLength:
   Max: 146
-
-# Offense count: 2
-Style/Documentation:
-  Exclude:
-    - 'spec/**/*'
-    - 'test/**/*'
-    - 'lib/useragent_api.rb'
-    - 'lib/useragent_api/client.rb'
