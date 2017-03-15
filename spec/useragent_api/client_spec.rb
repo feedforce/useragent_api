@@ -15,7 +15,7 @@ describe UseragentApi::Client do
 
   describe '#parse' do
     shared_examples_for 'UseragentAPI' do
-      let(:request_uri) { 'https://useragentapi.com/api/v4/json/%s/%s' % [api_key, CGI.escape(user_agent)] }
+      let(:request_uri) { 'https://useragentapi.com/api/v4/json/%s/%s' % [api_key, CGI.escape(useragent)] }
 
       before do
         stub_request(:get, request_uri).to_return(
@@ -24,13 +24,13 @@ describe UseragentApi::Client do
       end
 
       it 'is valid response' do
-        expect(client.parse(user_agent)).to match_array expectation
+        expect(client.parse(useragent)).to match_array expectation
       end
     end
 
     let(:client) { UseragentApi::Client.new(api_key) }
     let(:api_key) { '01234abc' }
-    let(:user_agent) { 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36' }
+    let(:useragent) { 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36' }
 
     context 'given registered API key' do
       let(:stub_status) { 200 }
@@ -79,7 +79,7 @@ describe UseragentApi::Client do
           }
         }
       end
-      let(:user_agent) { 'Excel/15.0' }
+      let(:useragent) { 'Excel/15.0' }
 
       it_behaves_like 'UseragentAPI'
     end

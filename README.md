@@ -30,10 +30,10 @@ Or install it yourself as:
     client = UseragentApi::Client.new(API_KEY)
     ```
 
-2. Parse an user agent.
+2. Parse an useragent.
 
     ```ruby
-    result = client.parse('an user agent')
+    result = client.parse('an useragent')
     ```
 
 ## Development
