@@ -1,5 +1,11 @@
 inherit_from:
   - .rubocop_todo.yml
 
+AllCops:
+  Exclude:
+    - Rakefile
+    - bin/*
+    - vendor/**/*
+
 Style/TrailingCommaInLiteral:
   Enabled: false
