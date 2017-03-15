@@ -24,7 +24,7 @@ describe UseragentApi::Client do
       end
 
       it 'is valid response' do
-        expect(client.parse(user_agent)).to match_array valid_response
+        expect(client.parse(user_agent)).to match_array expectation
       end
     end
 
@@ -34,8 +34,8 @@ describe UseragentApi::Client do
 
     context 'given registered API key' do
       let(:stub_status) { 200 }
-      let(:stub_body) { valid_response.to_json }
-      let(:valid_response) do
+      let(:stub_body) { expectation.to_json }
+      let(:expectation) do
         {
           'data' => {
             'ua_type'         => 'Desktop',
@@ -55,8 +55,8 @@ describe UseragentApi::Client do
     context 'given unregistered API key' do
       let(:api_key) { 'unregistered' }
       let(:stub_status) { 400 }
-      let(:stub_body) { valid_response.to_json }
-      let(:valid_response) do
+      let(:stub_body) { expectation.to_json }
+      let(:expectation) do
         {
           'error' => {
             'code'    => 'key_invalid',
@@ -68,10 +68,26 @@ describe UseragentApi::Client do
       it_behaves_like 'UseragentAPI'
     end
 
+    context 'given unclassified Useragent' do
+      let(:stub_status) { 200 }
+      let(:stub_body) { expectation.to_json }
+      let(:expectation) do
+        {
+          'error' => {
+            'code'    => 'useragent_not_found',
+            'message' => 'Useragent Not Found'
+          }
+        }.to_json
+      end
+      let(:user_agent) { 'Excel/15.0' }
+
+      it_behaves_like 'UseragentAPI'
+    end
+
     context 'when a server returns a broken response' do
       let(:stub_status) { 500 }
       let(:stub_body) { '<b>Fatal error</b>' }
-      let(:valid_response) { {} }
+      let(:expectation) { {} }
 
       it_behaves_like 'UseragentAPI'
     end
