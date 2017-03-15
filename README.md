@@ -1,8 +1,10 @@
 # UseragentApi
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/useragent_api`. To experiment with that code, run `bin/console` for an interactive prompt.
+[![Build Status](https://travis-ci.org/feedforce/useragent_api.svg?branch=master)][travisci]
 
-TODO: Delete this and the text above, and describe your gem
+[travisci]: https://travis-ci.org/feedforce/useragent_api
+
+This gem provides an access to [UseragentAPI](https://useragentapi.com).
 
 ## Installation
 
@@ -22,7 +24,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+1. Instantiate an instance of {UseragentApi::Client} with a valid API key.
+
+    ```ruby
+    client = UseragentApi::Client.new(API_KEY)
+    ```
+
+2. Parse an user agent.
+
+    ```ruby
+    result = client.parse('an user agent')
+    ```
 
 ## Development
 
