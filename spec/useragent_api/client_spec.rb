@@ -77,7 +77,7 @@ describe UseragentApi::Client do
             'code'    => 'useragent_not_found',
             'message' => 'Useragent Not Found'
           }
-        }.to_json
+        }
       end
       let(:user_agent) { 'Excel/15.0' }
 
