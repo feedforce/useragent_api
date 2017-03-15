@@ -1,2 +1,5 @@
 inherit_from:
   - .rubocop_todo.yml
+
+Style/TrailingCommaInLiteral:
+  Enabled: false
