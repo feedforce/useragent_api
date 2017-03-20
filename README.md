@@ -1,8 +1,8 @@
 # UseragentApi
 
-[![Travis Status](https://img.shields.io/travis/feedforce/useragent_api.svg?maxAge=2592000)][travisci]
-[![License](https://img.shields.io/github/license/feedforce/useragent_api.svg?maxAge=2592000?style=flat-square)][license]
-[![Gem](https://img.shields.io/gem/v/useragent_api.svg?maxAge=2592000?style=flat-square)][gem-link]
+[![Travis Status](https://img.shields.io/travis/feedforce/useragent_api.svg?style=flat-square)][travisci]
+[![License](https://img.shields.io/github/license/feedforce/useragent_api.svg?style=flat-square)][license]
+[![Gem](https://img.shields.io/gem/v/useragent_api.svg?style=flat-square)][gem-link]
 
 [travisci]: https://travis-ci.org/feedforce/useragent_api
 [license]: https://github.com/feedforce/useragent_api/blob/master/LICENSE.txt
