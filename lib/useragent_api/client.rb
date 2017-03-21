@@ -28,10 +28,8 @@ module UseragentApi
     end
 
     USERAGENT_API_FQDN = URI('https://useragentapi.com/')
-    private_constant :USERAGENT_API_FQDN
 
     USER_AGENT = 'UseragentApi gem/%s' % VERSION
-    private_constant :USER_AGENT
 
     private
 
