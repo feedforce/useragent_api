@@ -20,7 +20,7 @@ describe UseragentApi::Client do
 
       before do
         stub_request(:get, request_uri).to_return(
-          status: stub_status, body: stub_body
+          :status => stub_status, :body => stub_body
         )
       end
 

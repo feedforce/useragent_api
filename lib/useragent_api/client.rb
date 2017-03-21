@@ -35,7 +35,7 @@ module UseragentApi
 
     def request(useragent)
       uri = request_uri(useragent)
-      Net::HTTP.start(uri.host, uri.port, use_ssl: uri.scheme == 'https') do |http|
+      Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https') do |http|
         http.get(uri.path, 'User-Agent' => USER_AGENT)
       end
     end
