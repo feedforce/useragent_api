@@ -14,7 +14,10 @@ Metrics/LineLength:
     - spec/useragent_api/**/*
 
 Style/FormatString:
-  Enabled: false
+  EnforcedStyle: percent
+
+Style/FormatStringToken:
+  EnforcedStyle: unannotated
 
 Style/TrailingCommaInLiteral:
   Enabled: false
