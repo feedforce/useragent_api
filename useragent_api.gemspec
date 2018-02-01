@@ -20,9 +20,9 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_development_dependency 'bundler', '~> 1.14'
-  spec.add_development_dependency 'rake', '~> 10.0'
-  spec.add_development_dependency 'rspec', '~> 3.0'
-  spec.add_development_dependency 'rubocop', '~> 0.52.1'
+  spec.add_development_dependency 'bundler', '~> 1.x'
+  spec.add_development_dependency 'rake', '~> 12.x'
+  spec.add_development_dependency 'rspec', '~> 3.x'
+  spec.add_development_dependency 'rubocop', '~> 0.52.x'
   spec.add_development_dependency 'webmock'
 end
