@@ -19,5 +19,8 @@ Style/FormatString:
 Style/FormatStringToken:
   EnforcedStyle: unannotated
 
-Style/TrailingCommaInLiteral:
+Style/TrailingCommaInArrayLiteral:
+  Enabled: false
+
+Style/TrailingCommaInHashLiteral:
   Enabled: false
