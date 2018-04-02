@@ -3,7 +3,7 @@ AllCops:
     - Rakefile
     - bin/*
     - vendor/**/*
-  TargetRubyVersion: 2.3
+  TargetRubyVersion: 2.2
 
 Metrics/BlockLength:
   Exclude:
