@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'useragent_api/version'
 
 # :nodoc:
