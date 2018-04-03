@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 describe UseragentApi::Client do
   describe '#initialize' do
     let(:client) { UseragentApi::Client.new(api_key) }
