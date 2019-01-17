@@ -39,13 +39,13 @@ describe UseragentApi::Client do
       let(:expectation) do
         {
           'data' => {
-            'ua_type'         => 'Desktop',
-            'os_name'         => 'macOS',
-            'os_version'      => '10.12.3',
-            'browser_name'    => 'Chrome',
+            'ua_type' => 'Desktop',
+            'os_name' => 'macOS',
+            'os_version' => '10.12.3',
+            'browser_name' => 'Chrome',
             'browser_version' => '56.0.2924.87',
-            'engine_name'     => 'WebKit',
-            'engine_version'  => '537.36',
+            'engine_name' => 'WebKit',
+            'engine_version' => '537.36',
           }
         }
       end
@@ -60,7 +60,7 @@ describe UseragentApi::Client do
       let(:expectation) do
         {
           'error' => {
-            'code'    => 'key_invalid',
+            'code' => 'key_invalid',
             'message' => 'API Key Invalid'
           }
         }
@@ -75,7 +75,7 @@ describe UseragentApi::Client do
       let(:expectation) do
         {
           'error' => {
-            'code'    => 'useragent_not_found',
+            'code' => 'useragent_not_found',
             'message' => 'Useragent Not Found'
           }
         }
