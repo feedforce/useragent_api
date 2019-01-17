@@ -18,7 +18,7 @@ describe UseragentApi::Client do
   describe '#parse' do
     shared_examples_for 'UseragentAPI' do
       let(:client) { UseragentApi::Client.new(api_key) }
-      let(:request_uri) { 'https://useragentapi.com/api/v4/json/%s/%s' % [api_key, CGI.escape(useragent)] }
+      let(:request_uri) { "https://api.userstack.com/detect?access_key=#{api_key}&ua=#{CGI.escape(useragent)}" }
 
       before do
         stub_request(:get, request_uri).to_return(
