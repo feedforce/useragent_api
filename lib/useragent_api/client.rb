@@ -12,6 +12,7 @@ module UseragentApi
     # @see https://useragentapi.com/docs/v4
     def initialize(api_key)
       raise ArgumentError, 'invalid API key' if api_key.empty?
+
       @api_key = api_key.freeze
       freeze
     end
@@ -29,7 +30,7 @@ module UseragentApi
       parse_as_json(response.body)
     end
 
-    USERAGENT_API_FQDN = URI('https://useragentapi.com/')
+    USERAGENT_API_FQDN = URI('https://api.userstack.com/')
     private_constant :USERAGENT_API_FQDN
 
     USER_AGENT = 'UseragentApi gem/%s' % VERSION
@@ -46,7 +47,11 @@ module UseragentApi
 
     def request_uri(useragent)
       USERAGENT_API_FQDN.dup.tap do |uri|
-        uri.path = '/api/v4/json/%s/%s' % [api_key, CGI.escape(useragent)]
+        uri.path = '/detect'
+        uri.query = {
+          access_key: api_key,
+          ua: CGI.escape(useragent)
+        }.map { |k, v| "#{k}=#{v}" }.join('&')
       end
     end
 
