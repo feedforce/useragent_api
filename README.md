@@ -1,3 +1,9 @@
+## UseragentApi is Deprecated!
+
+UseragentApi has been shutdown on Jan 31st 2019, has switched to [userstack](https://userstack.com/).
+
+You can use [userstack gem](https://github.com/feedforce/userstack). You can recieve the same response.
+
 # UseragentApi
 
 [![Travis Status](https://img.shields.io/travis/feedforce/useragent_api.svg?style=flat-square)][travisci]
